@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic CV - BenIdictus Tri Wibowo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #0081C9;
+            border: 4px solid #f0f8ff;
+        }
+        .timeline-path {
+            position: absolute;
+            left: -22px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #5BC0F8;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center py-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#0041C2] tracking-tighter">BENEDICTUS TRI WIBOWO</h1>
+            <p class="text-xl md:text-2xl mt-4 font-semibold text-[#0081C9]">The Anatomy of a Full-Stack Professional</p>
+            <p class="max-w-3xl mx-auto mt-2 text-gray-600">
+                A developer who builds with precision and tests with purpose. This is a visual exploration of a career that blends creative development with analytical quality assurance.
+            </p>
+        </header>
+
+        <main>
+            <section id="core-competencies" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#0041C2]">Core Competencies</h2>
+                <p class="text-center max-w-2xl mx-auto mb-10 text-gray-600">
+                    My skills are centered around three key pillars: building robust web applications, managing data effectively, and ensuring impeccable quality through rigorous testing. This combination allows for the creation of reliable and efficient software solutions.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                        <h3 class="text-xl font-bold mb-2 text-[#0081C9]">Web Development</h3>
+                        <div class="chart-container" style="height: 250px;">
+                            <canvas id="devSkillsChart"></canvas>
+                        </div>
+                        <p class="text-sm mt-4 text-gray-500">Expertise in frontend and backend technologies to build complete web solutions.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                        <h3 class="text-xl font-bold mb-2 text-[#0081C9]">Database Management</h3>
+                        <div class="chart-container" style="height: 250px;">
+                            <canvas id="dbSkillsChart"></canvas>
+                        </div>
+                        <p class="text-sm mt-4 text-gray-500">Skilled in designing and managing databases that are both powerful and efficient.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                        <h3 class="text-xl font-bold mb-2 text-[#0081C9]">Testing & QA</h3>
+                        <div class="chart-container" style="height: 250px;">
+                            <canvas id="qaSkillsChart"></canvas>
+                        </div>
+                        <p class="text-sm mt-4 text-gray-500">A meticulous approach to testing ensures software is reliable and bug-free.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="soft-skills" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#0041C2]">Soft Skills</h2>
+                <p class="text-center max-w-2xl mx-auto mb-10 text-gray-600">
+                    Beyond technical expertise, my professional approach is strengthened by a set of adaptable soft skills that foster effective collaboration and continuous improvement. These skills are crucial for thriving in dynamic work environments.
+                </p>
+                <div class="bg-white p-6 rounded-xl shadow-lg grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-2xl text-[#0081C9]">💡</span>
+                        <p class="text-lg text-gray-700 font-medium">Creative Problem-Solving & Debugging</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-2xl text-[#0081C9]">📚</span>
+                        <p class="text-lg text-gray-700 font-medium">High Curiosity & Fast Learner</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-2xl text-[#0081C9]">💬</span>
+                        <p class="text-lg text-gray-700 font-medium">Clear Communication & User Interaction</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-2xl text-[#0081C9]">🤝</span>
+                        <p class="text-lg text-gray-700 font-medium">Team Collaboration & Adaptability</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="journey" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#0041C2]">Professional Journey</h2>
+                <p class="text-center max-w-2xl mx-auto mb-12 text-gray-600">
+                    My career path reflects a continuous journey of learning and application, from a strong academic foundation to hands-on roles in the tech industry, each step building upon the last.
+                </p>
+                <div class="relative max-w-2xl mx-auto pl-8">
+                    <div class="timeline-path"></div>
+                    <div class="relative pl-8 py-4 timeline-item">
+                        <h3 class="text-lg font-bold text-[#0081C9]">IT Quality Assurance</h3>
+                        <p class="font-semibold">PT CIMB Niaga</p>
+                        <p class="text-sm text-gray-500">Jul 2024 – Present</p>
+                        <p class="mt-2 text-gray-700">Validating data, creating test scripts, and developing automation to ensure system integrity in a banking environment.</p>
+                    </div>
+                    <div class="relative pl-8 py-4 timeline-item">
+                        <h3 class="text-lg font-bold text-[#0081C9]">Bachelor of Information Technology</h3>
+                        <p class="font-semibold">Universitas Atma Jaya Yogyakarta</p>
+                        <p class="text-sm text-gray-500">Sep 2019 – Feb 2024</p>
+                        <p class="mt-2 text-gray-700">Graduated with a GPA of 3.62, culminating in a final project focused on a web-based management system using Laravel.</p>
+                    </div>
+                    <div class="relative pl-8 py-4 timeline-item">
+                        <h3 class="text-lg font-bold text-[#0081C9]">System Analyst Intern</h3>
+                        <p class="font-semibold">PT Hashmicro Solusi Indonesia</p>
+                        <p class="text-sm text-gray-500">Aug 2022 – Dec 2022</p>
+                        <p class="mt-2 text-gray-700">Gained practical experience in testing backend services, automating scripts, and collaborating in UAT for ERP software.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="project-spotlight" class="mb-16 bg-white p-6 md:p-10 rounded-xl shadow-lg">
+                 <h2 class="text-3xl font-bold text-center mb-4 text-[#0041C2]">Project Spotlight: Personal Finance App</h2>
+                 <p class="text-center max-w-3xl mx-auto mb-10 text-gray-600">
+                    This project is a testament to my full-stack capabilities, integrating a powerful backend with a responsive, user-friendly frontend. It was an exercise in creating a practical, data-driven application from the ground up, focusing on user experience and robust functionality.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+                    <div class="md:col-span-3">
+                        <h3 class="text-xl font-bold mb-4 text-[#0081C9]">Technology Stack Breakdown</h3>
+                        <div class="chart-container" style="max-width: 100%;">
+                            <canvas id="projectTechChart"></canvas>
+                        </div>
+                         <p class="text-sm mt-4 text-gray-500 text-center">A balanced use of backend logic, frontend interactivity, and database management.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold mb-4 text-[#0081C9]">Core Features</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><span class="text-[#0081C9] font-bold mr-2">✓</span> Transaction Logging & Budgeting</li>
+                            <li class="flex items-start"><span class="text-[#0081C9] font-bold mr-2">✓</span> Recurring Entry Management</li>
+                            <li class="flex items-start"><span class="text-[#0081C9] font-bold mr-2">✓</span> Filterable Reports & PDF Export</li>
+                            <li class="flex items-start"><span class="text-[#0081C9] font-bold mr-2">✓</span> User Authentication & Validation</li>
+                            <li class="flex items-start"><span class="text-[#0081C9] font-bold mr-2">✓</span> Interactive UI with Chart.js</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skills-proficiency" class="mb-16">
+                 <h2 class="text-3xl font-bold text-center mb-4 text-[#0041C2]">Skills Proficiency</h2>
+                 <p class="text-center max-w-2xl mx-auto mb-10 text-gray-600">
+                    Below is a comparative look at my proficiency across key technologies and tools. This visualization highlights my strengths in both development and quality assurance, forming the backbone of my technical expertise.
+                </p>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                    <div class="chart-container" style="height: 400px; max-width: 100%;">
+                        <canvas id="skillsBarChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-10 border-t border-[#86E5FF]">
+            <h3 class="text-2xl font-bold text-[#0041C2]">Get In Touch</h3>
+            <p class="text-gray-600 mt-2 mb-4">I'm always open to new opportunities and collaborations.</p>
+            <div class="flex justify-center space-x-6 text-lg">
+                <a href="https://linkedin.com/in/benidictus-tri-wibowo" target="_blank" class="text-[#0081C9] hover:text-[#0041C2] transition-colors">🌐 LinkedIn</a>
+                <a href="https://github.com/BladeX45" target="_blank" class="text-[#0081C9] hover:text-[#0041C2] transition-colors">🐱 GitHub</a>
+                <a href="mailto:benidictustriwibowo@gmail.com" class="text-[#0081C9] hover:text-[#0041C2] transition-colors">📧 Email</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (str, maxLen) => {
+            if (str.length <= maxLen) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxLen) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        };
+        
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        
+        const palette = {
+            blue1: '#0041C2',
+            blue2: '#0081C9',
+            blue3: '#5BC0F8',
+            blue4: '#86E5FF',
+            text: '#374151'
+        };
+
+        const devSkillsCtx = document.getElementById('devSkillsChart').getContext('2d');
+        new Chart(devSkillsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Laravel', 'PHP', 'JavaScript', 'HTML/CSS'],
+                datasets: [{
+                    data: [40, 30, 20, 10],
+                    backgroundColor: [palette.blue1, palette.blue2, palette.blue3, palette.blue4],
+                    borderColor: '#fff',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipTitleCallback.plugins,
+                    legend: { position: 'bottom', labels: { color: palette.text } }
+                },
+                cutout: '60%'
+            }
+        });
+
+        const dbSkillsCtx = document.getElementById('dbSkillsChart').getContext('2d');
+        new Chart(dbSkillsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['MySQL', 'PostgreSQL'],
+                datasets: [{
+                    data: [65, 35],
+                    backgroundColor: [palette.blue2, palette.blue3],
+                    borderColor: '#fff',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipTitleCallback.plugins,
+                    legend: { position: 'bottom', labels: { color: palette.text } }
+                },
+                cutout: '60%'
+            }
+        });
+        
+        const qaSkillsCtx = document.getElementById('qaSkillsChart').getContext('2d');
+        new Chart(qaSkillsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Postman', 'UFT One', 'Jira/ALM', 'Scripting'],
+                datasets: [{
+                    data: [35, 30, 20, 15],
+                    backgroundColor: [palette.blue1, palette.blue2, palette.blue3, palette.blue4],
+                    borderColor: '#fff',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipTitleCallback.plugins,
+                    legend: { position: 'bottom', labels: { color: palette.text } }
+                },
+                cutout: '60%'
+            }
+        });
+        
+        const projectTechCtx = document.getElementById('projectTechChart').getContext('2d');
+        new Chart(projectTechCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Backend (Laravel)', 'Frontend (JS/CSS)', 'Database (MySQL)'],
+                datasets: [{
+                    label: 'Focus Area',
+                    data: [50, 30, 20],
+                    backgroundColor: [palette.blue1, palette.blue2, palette.blue3],
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                     ...tooltipTitleCallback.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { display: false },
+                        ticks: { color: palette.text }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: palette.text }
+                    }
+                }
+            }
+        });
+        
+        const skillsBarCtx = document.getElementById('skillsBarChart').getContext('2d');
+        new Chart(skillsBarCtx, {
+            type: 'bar',
+            data: {
+                labels: ['PHP', 'Laravel', 'JavaScript', 'MySQL', 'Postman API Testing', 'UFT One Automation', 'Vue.js', 'PostgreSQL'].map(label => wrapLabel(label, 16)),
+                datasets: [{
+                    label: 'Proficiency Level',
+                    data: [90, 88, 80, 85, 90, 75, 70, 78],
+                    backgroundColor: [
+                        palette.blue1, palette.blue1, palette.blue2, palette.blue1, 
+                        palette.blue3, palette.blue3, palette.blue2, palette.blue1
+                    ],
+                    barPercentage: 0.7,
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'x',
+                plugins: {
+                    ...tooltipTitleCallback.plugins,
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            color: palette.text,
+                            font: { size: 12 }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: '#e0e0e0' },
+                        ticks: {
+                            color: palette.text
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
